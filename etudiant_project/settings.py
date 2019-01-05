@@ -167,7 +167,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
     # AWS_S3_SECRET_ACCESS_KEY = os.environ["zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt"]
     AWS_S3_SECRET_ACCESS_KEY = os.environ.get("AWS_S3_SECRET_ACCESS_KEY", "zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt")
 
-    AWS_STORAGE_BUCKET_NAME = os.environ["siteasem"]
+    AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "siteasem")
 
     # Change to the media center you chose when creating the bucket
     # AWS_S3_HOST = "s3-us-east-1.amazonaws.com"
