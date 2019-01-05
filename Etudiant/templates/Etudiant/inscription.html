@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block section %}
+
+
+<form method="post" action="{% url "inscription" %}" >
+    <div>Insciption</div>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Validé">
+</form>
+
+{% endblock %}

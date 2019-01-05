@@ -1,0 +1,87 @@
+settings:
+    Insertions des application ✘
+    config: variable DEBUG ✘
+    Indexation du dossiers template au root du project (project-root and app): ✘
+        templates ✘
+
+    config de la base de données ✘
+        sqlite3 ✘
+
+    language du site: Installation gettext 🛠
+        français ✘
+        Englais (optionnel) 🛠
+
+    staticfiles: ✘
+        creation des dossiers (project-root and app): ✘
+            Installation django-bootstrap ✘
+            Installation de pillow ✘
+            static/: 🛠
+                css/: ✘
+                JavaScript/: (optionnel)
+                img/: ✘
+
+            dossiers/: (optionnel) 🛠
+
+        Indexation des dossiers: ✘
+
+
+    optionnel: middleware 🛠
+
+
+Insertions de l'application Etudiant: ✘
+    Insertions in project: ✘
+
+    static: ✘
+        Gestions des fichiers: ✘
+
+
+    views: 🛠
+        views accueille ✘
+        views etudiant page 🛠
+        views page sujets 🛠
+
+
+    urls:
+        Indexation de la page admin ✘
+        Indexation de l'accueille ✘
+        Indexation de la page Etudiant 🛠
+        Indexation de la page sujets 🛠
+
+
+    templates:
+        la page admin ✘
+        la page l'accueille 🛠
+            bootstrap page: base.html
+        Section page Etudiant 🛠
+            bootstrap page: base.html + customus(url vers etudiant page)
+
+        Sujet page: ✘
+            dipslay: ✘
+                domaine1 domaine2 domaine2 (how many domaines:badge)
+                cours1   cours2    cours3
+
+        Cours page: ✘
+            dipslay: ✘
+                cours1    cours2     cours2 (how many cours :badge)
+                sujets1   sujets2    sujets3 (how many sujets :badge)
+
+
+    forms:
+        formulaire de commentaire: (optionnel)
+            sujets
+
+
+    models: 🛠
+        Gestions des Tables dans la base de données:
+            Tables des des domaines
+            Tables des cours:
+            Tables des sujets:
+
+
+    admin: 🛠
+        config de l'admin pages
+
+
+    optionnel: templatetags
+
+

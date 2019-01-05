@@ -1,0 +1,14 @@
+settings:
+    config:
+        key-SECRET_KEY
+        variable DEBUG
+        ALLOWED_HOSTS: address et sous address
+        base de données
+        staticfiles
+
+Installation:
+    pillow
+    gnicorn
+    ...
+        
+

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{%block section%}
+
+<form method="post" action="{% url "connexion" %}">
+{% if erros %} 
+    <div id="erreur">Mot de pass ou Pseaudonime Incorrect, Réssayez ou
+    cliqué sur <a href="{% url "connexion" %}">"Mot de passe Oublié"</a> pour le réinitialiser</div>
+{% endif %}
+
+{% if user.is_authenticated %}
+    Vous etes Conneté {{ user.username }}
+{% else %}
+        <div>Connexion</div>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Se connecté">
+    </form>
+{% endif %}
+{% endblock %}

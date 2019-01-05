@@ -1,0 +1,85 @@
+{% extends "index.html" %}
+
+{% block bootstrap3_staticfiles %}
+
+    {% load bootstrap3 %}
+    {% load staticfiles %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+
+{% endblock bootstrap3_staticfiles %}
+
+    {% block custom_css %}
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'css/etudiant_page.less' %}" rel="stylesheet">
+    {% endblock custom_css %} 
+
+
+<!-- Redefinition to nav section -->
+{% block nav %}
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">ASEM</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="{% url 'accueil' %}">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'accueil' %}">Etudiant</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'accueil' %}">Portfolio</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'accueil' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+{% endblock nav %}
+
+<!-- Section who display the sujets -->
+{% block global_section %}
+    <section style="width: 900px;margin:auto">
+        <div>
+			<table class="table">
+			  <thead class="thead-dark">
+				<tr>
+				  <th scope="col">#</th>
+				  <th scope="col">Sujets</th>
+                  <th scope="col"><strong>Date</strong></th>
+				  <th scope="col">Téléchargé</th>
+				  <!-- <th scope="col">Handle</th> -->
+				</tr>
+			  </thead>
+			  <tbody>
+                {% for sujet in sujets %}
+                    <tr>
+                        <th scope="row">*</th>
+                        <td class="chose">{{ sujet.nom }}</td>
+                        <th scope="col">{{ sujet.date | date:"D d M Y"}}</th>
+                        <td>
+                            <a href="{{ sujet.fichier.url }}"> Téléchargé </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+			  </tbody>
+			</table>
+        </div>
+    </section>
+{% endblock global_section %}

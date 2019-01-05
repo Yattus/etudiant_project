@@ -1,0 +1,8 @@
+!.gitignore
+*.pyc
+Etudiant/migrations/__pycache__/
+___pycache__/
+Etudiant/__pycache__/ 
+etudiant_project/__pycache__/
+Etudiant/templatetags/__pycache__/
+env/

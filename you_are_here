@@ -1,0 +1,5 @@
+correction du templates bootstrap index.html, l'affichage no correcte.: Resolu
+make views to Etudiant( inside we have cours and sujets pages)
+
+Le chemin vers le fichier a téléchargé n'est pas correct sur le site en PRODUCTION
+mais en development si.. reglage dans settings.py

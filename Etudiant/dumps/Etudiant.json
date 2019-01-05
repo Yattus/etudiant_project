@@ -1,0 +1,1 @@
+[{"model": "Etudiant.cours", "pk": 1, "fields": {"Nom": "Algorithme", "domaine": 1, "slug": "Science-de-l-ing\u00e9nieur-Algorithme"}}, {"model": "Etudiant.domaine", "pk": 1, "fields": {"Nom": "G\u00e9nie Informatique", "slug": "Science-de-l-ing\u00e9nieur-G\u00e9nie-Informatique"}}]

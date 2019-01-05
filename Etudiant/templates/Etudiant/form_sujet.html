@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block section %}
+    <form method= "post" enctype= "multipart/form-data" action="{% url "ajouter_sujet" %}">
+        <div>
+            Ajouter un sujet
+        </div>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for= 'date' >Quel année ?:</label>
+        <input type= 'date' name= 'date' id= 'date'/>
+        <br /><br />
+        <input type="submit" value= "Soumettre"/>
+    </form>
+{% endblock section %}

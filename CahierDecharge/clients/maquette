@@ -1,0 +1,47 @@
+Maquette:
+    Analyse et etude de la maquette pour la determination des differentes
+    implementations:
+    
+
+    Nombre de pages: 3 pages
+    dimension des pages:
+    Page1:
+    couleur de font: #097
+        differentes parties:
+            header:
+                dimensions:
+                couleur de font: #xxx
+                police utilisé:
+                font utilisé:
+            section:
+                dimensions:
+                couleur de font: #xxx
+                police utilisé:
+                font utilisé:
+            footer:
+                dimensions:
+                couleur de font: #xxx
+                police utilisé:
+                font utilisé:
+
+    Page2:
+    couleur de font: #097
+        differentes parties:
+            header:
+                dimensions:
+                couleur de font: #xxx
+                police utilisé:
+                font utilisé:
+            section:
+                dimensions:
+                couleur de font: #xxx
+                police utilisé:
+                font utilisé:
+            footer:
+                dimensions:
+                couleur de font: #xxx
+                police utilisé:
+                font utilisé:
+
+
+

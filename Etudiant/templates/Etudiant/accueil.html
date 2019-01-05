@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block bootstrap3_staticfiles %}
+
+    {% load bootstrap3 %}
+    {% load staticfiles %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+
+{% endblock bootstrap3_staticfiles %}
+
+{% block custom_css %}
+        
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/etudiant_page.less' %}" rel="stylesheet">
+    
+{% endblock custom_css %} 
