@@ -158,12 +158,14 @@ if os.environ.get('ENV') == 'PRODUCTION':
     AWS_QUERYSTRING_AUTH = False
 
     # Your S3 Access Key
-    AWS_S3_ACCESS_KEY_ID = os.environ["AKIAIRUCDH7VA4GH672Q"]
+    # AWS_S3_ACCESS_KEY_ID = os.environ["AKIAIRUCDH7VA4GH672Q"]
+    AWS_S3_ACCESS_KEY_ID = os.environ.get("AWS_S3_ACCESS_KEY_ID", "AKIAIRUCDH7VA4GH672Q")
 
     # Problm with IndentationError: unindent does not match any indent
     # fix: indent to "if" condition until end to if
     # Your S3 Secret
-    AWS_S3_SECRET_ACCESS_KEY = os.environ["zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt"]
+    # AWS_S3_SECRET_ACCESS_KEY = os.environ["zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt"]
+    AWS_S3_SECRET_ACCESS_KEY = os.environ.get("AWS_S3_SECRET_ACCESS_KEY", "zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt")
 
     AWS_STORAGE_BUCKET_NAME = os.environ["siteasem"]
 
