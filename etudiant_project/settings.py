@@ -148,41 +148,42 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # ADMIN_MEDIA_PREFIX = os.path.join(BASE_DIR, '/static/dossiers/')
 
-	STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-	# ADMIN_MEDIA_PREFIX = os.path.join(BASE_DIR, '/static/dossiers/')
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, "static"),
+    )
 
-	STATICFILES_DIRS = (
-		os.path.join(BASE_DIR, "static"),
-	)
+    # AWS_S3_SECURE_URLS = False       # use http instead of https
 
-	# AWS_S3_SECURE_URLS = False       # use http instead of https
+    # don't add complex authentication-related query parameters for requests
+    AWS_QUERYSTRING_AUTH = False
 
-	# don't add complex authentication-related query parameters for requests
-	AWS_QUERYSTRING_AUTH = False
+    # Your S3 Access Key
+    AWS_S3_ACCESS_KEY_ID = os.environ["AKIAIRUCDH7VA4GH672Q"]
 
-	# Your S3 Access Key
-	AWS_S3_ACCESS_KEY_ID = os.environ["AKIAIRUCDH7VA4GH672Q"]
-
-	# Your S3 Secret
+    # Problm with IndentationError: unindent does not match any indent
+    # fix: indent to "if" condition until end to if
+    # Your S3 Secret
     AWS_S3_SECRET_ACCESS_KEY = os.environ["zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt"]
 
-	AWS_STORAGE_BUCKET_NAME = os.environ["siteasem"]
+    AWS_STORAGE_BUCKET_NAME = os.environ["siteasem"]
 
-	# Change to the media center you chose when creating the bucket
-	# AWS_S3_HOST = "s3-us-east-1.amazonaws.com"
+    # Change to the media center you chose when creating the bucket
+    # AWS_S3_HOST = "s3-us-east-1.amazonaws.com"
 
-    MEDIA_URL = 'http://siteasem.s3.amazonaws.com/media_files/'
+    MEDIA_URL = 'http://siteasem.s3.amazonaws.com/media/'
 
-	DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"
 
-	# STATICFILES_STORAGE = "etudiant_project.s3utils.StaticS3BotoStorage"
+    # STATICFILES_STORAGE = "etudiant_project.s3utils.StaticS3BotoStorage"
 
-	# Gestion of staticfiles with whitenoise
-	STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    # Gestion of staticfiles with whitenoise
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-	db_from_env = dj_database_url.config()
-	DATABASES['default'].update(db_from_env)
+    db_from_env = dj_database_url.config()
+    DATABASES['default'].update(db_from_env)
 
 
 # REDIRECTION to lien
