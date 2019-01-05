@@ -165,13 +165,14 @@ if os.environ.get('ENV') == 'PRODUCTION':
 	AWS_S3_ACCESS_KEY_ID = os.environ["AKIAIRUCDH7VA4GH672Q"]
 
 	# Your S3 Secret
-	AWS_S3_SECRET_ACCESS_KEY = os.environ["zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt"]
+    AWS_S3_SECRET_ACCESS_KEY = os.environ["zOHx80JWXOVZHMe5ygbE4iW9GDPD92oNUQn1OzXt"]
 
 	AWS_STORAGE_BUCKET_NAME = os.environ["siteasem"]
 
 	# Change to the media center you chose when creating the bucket
 	# AWS_S3_HOST = "s3-us-east-1.amazonaws.com"
-    MEDIA_URL = 'http://%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
+
+    MEDIA_URL = 'http://siteasem.s3.amazonaws.com/media_files/'
 
 	DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"
 
