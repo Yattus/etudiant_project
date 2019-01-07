@@ -4,5 +4,7 @@ Etudiant/migrations/__pycache__/
 ___pycache__/
 Etudiant/__pycache__/ 
 etudiant_project/__pycache__/
+etudiant_project/settings.py
+db.sqlite3
 Etudiant/templatetags/__pycache__/
 env/
